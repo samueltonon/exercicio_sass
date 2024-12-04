@@ -1,0 +1,145 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Roboto, sans-serif;
+}
+
+body {
+  background-color: #82ccdd;
+  overflow-x: hidden;
+}
+body header {
+  background-color: #b8e994;
+  position: sticky;
+  top: 0;
+  left: 0;
+}
+body header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 0;
+}
+body header a {
+  font-size: 1.7em;
+}
+body section {
+  padding: 56px 0;
+}
+body section h2 {
+  font-size: 3em;
+}
+
+.container {
+  max-width: 1024px;
+  width: 100%;
+  margin: 0 auto;
+}
+.container .img-produtos {
+  height: 200px;
+}
+.container h2 {
+  text-align: center;
+}
+
+footer {
+  background-color: #b8e994;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease, transform 0.3s ease;
+  margin: 0;
+  padding: 20px;
+}
+footer a {
+  text-decoration: none;
+  color: #0c2461;
+  font-weight: bold;
+  transition: color 0.3s #0c2461;
+}
+footer:hover {
+  color: #524f4f;
+  transform: scale(1.1);
+  text-shadow: 0 0 8px rgba(0, 119, 181, 0.7);
+}
+footer:focus {
+  background-color: #000;
+}
+
+.menu {
+  display: flex;
+}
+.menu li {
+  list-style: none;
+  font-weight: bold;
+  margin-left: 24px;
+}
+.menu li a {
+  text-decoration: none;
+  color: #000;
+}
+
+.products {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(3, 32.66%);
+  column-gap: 1%;
+  row-gap: 4%;
+}
+.products .product-item {
+  list-style: none;
+}
+.products .product-item img {
+  width: 100%;
+  border-radius: 16px;
+}
+
+.product-button {
+  text-decoration: none;
+  background-color: #f6b93b;
+  display: block;
+  color: #fff;
+  text-align: center;
+  padding: 8px 0;
+  border-radius: 8px;
+  margin-top: 8px;
+}
+.product-button:hover {
+  background-color: rgb(218.4682926829, 150.4756097561, 10.0317073171);
+}
+
+@media screen and (max-width: 1023px) {
+  .container {
+    max-width: 80%;
+  }
+  .products {
+    grid-template-columns: repeat(2, 48.5%);
+    column-gap: 3%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .container {
+    max-width: 80%;
+  }
+  header {
+    padding: 16px;
+  }
+  header img {
+    height: 30px;
+  }
+  .secao-espaco {
+    padding: 20px 0;
+  }
+  .container h2 {
+    font-size: 2em;
+  }
+  .products {
+    display: block;
+  }
+  .product-item {
+    margin-bottom: 32px;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */

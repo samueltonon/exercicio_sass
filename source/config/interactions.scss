@@ -1,0 +1,60 @@
+@use 'variaveis' as *;
+
+@mixin estiloLista() {
+    list-style: none;
+}
+
+@mixin estiloTexto() {
+    text-decoration: none;
+}
+
+@mixin corSecundaria() {
+    background-color: $corSecundaria;
+}
+
+.menu {
+    display: flex;
+
+    li {
+        @include estiloLista();
+        font-weight: bold;
+        margin-left: 24px;
+
+        a {
+            @include estiloTexto();
+            color: #000;
+        }
+    }
+}
+
+.products {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(3, 32.66%);
+    column-gap: 1%;
+    row-gap: 4%;
+
+    .product-item {
+        @include estiloLista;
+
+        img {
+            width: 100%;
+            border-radius: 16px;
+        }
+    }
+}
+
+.product-button {
+    @include estiloTexto();
+    @include corSecundaria();
+    display: block;
+    color: #fff;
+    text-align: center;
+    padding: 8px 0;
+    border-radius: 8px;
+    margin-top: 8px;
+
+    &:hover {
+        background-color: darken($corSecundaria, 15%);
+    }
+}
